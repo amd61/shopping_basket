@@ -34,4 +34,14 @@ class basket {
     return total;
   }
 
+  public double total_discounted(){
+    if (this.total() > 20.00) {
+      double discount = this.total() * 0.1;
+      double newTotal = this.total() - discount;
+      return newTotal;
+    } else {
+      return this.total();
+    }
+  }
+
 }
